@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "205113648358",
+    "project_id": "booksapp-ae149",
+    "storage_bucket": "booksapp-ae149.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205113648358:android:c995619fa3204761b88727",
+        "android_client_info": {
+          "package_name": "com.elads.booksapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205113648358-6291ctiogtp43oolaqldqhhan3nlmdic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFedXKDBejUSWSLwBBfiXGOt7H8Li0--s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205113648358-6291ctiogtp43oolaqldqhhan3nlmdic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
