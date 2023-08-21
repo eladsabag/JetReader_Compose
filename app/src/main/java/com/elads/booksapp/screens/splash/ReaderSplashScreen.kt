@@ -1,5 +1,6 @@
 package com.elads.booksapp.screens.splash
 
+import android.se.omapi.Reader
 import android.view.animation.OvershootInterpolator
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
@@ -25,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.elads.booksapp.components.ReaderLogo
 import com.elads.booksapp.navigation.ReaderScreens
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.delay
 
 @Composable
@@ -43,7 +45,11 @@ fun ReaderSplashScreen(navController: NavHostController) {
             )
         )
         delay(2000L)
-        navController.navigate(ReaderScreens.LoginScreen.name)
+        if (FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty()) {
+            navController.navigate(ReaderScreens.LoginScreen.name)
+        } else {
+            navController.navigate(ReaderScreens.HomeScreen.name)
+        }
     }
     Surface(
         modifier = Modifier
