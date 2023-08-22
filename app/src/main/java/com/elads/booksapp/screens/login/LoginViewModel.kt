@@ -57,9 +57,10 @@ class LoginViewModel: ViewModel() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             home()
-                        } else {
-                            Log.d("FB", "signInWithEmailAndPassword: ${task.result}")
                         }
+                    }
+                    .addOnFailureListener {
+                        Log.d("FB", "signInWithEmailAndPassword: ${it.message}")
                     }
             } catch (ex: Exception) {
                 Log.d("FB", "signInWithEmailAndPassword: ${ex.message}")

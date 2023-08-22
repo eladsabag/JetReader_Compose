@@ -59,8 +59,12 @@ fun ReaderLoginScreen(
             ReaderLogo()
             UserForm(loading = false, isCreateAccount = !showLoginForm.value) { email, password ->
                 if (showLoginForm.value) {
-                    viewModel.signInWithEmailAndPassword(email, password) {
-                        navController.navigate(ReaderScreens.HomeScreen.name)
+                    try {
+                        viewModel.signInWithEmailAndPassword(email, password) {
+                            navController.navigate(ReaderScreens.HomeScreen.name)
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
                     }
                 } else {
                     viewModel.createUserWithEmailAndPassword(email, password) {

@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.elads.booksapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.elads.booksapp"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -53,6 +53,12 @@ android {
 }
 
 dependencies {
+    // Coil
+    implementation("io.coil-kt:coil-compose:2.0.0")
+
+    // Extended Icons
+    implementation("androidx.compose.material:material-icons-extended:1.5.0")
+
     // Dagger-Hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
